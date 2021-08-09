@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculate Miles Per Gallon</title>
+</head>
+<body>
+    <script>
+        var miles;  
+        var gallons;
+        var mpg;
+        miles = prompt("enter miles");
+        miles = parseFloat(miles);
+        gallons = prompt("enter gallons");
+        gallons = parseFloat(gallons);
+        mpg = miles / gallons;
+        mpg = parseInt(mpg)
+        document.write(
+            "<h1>The Miles Per Gallons Appication</h1><br><br> " + 
+            "Miles driven =" + miles + "<br>" + 
+            "Gallons of gas =" + gallons +  "<br><br>" + 
+            "Miles per gallons =" + mpg + "<br><br>" + 
+            "<h3>Thank for using our MPG applicaton</h3><br> "
+        )
+    </script>
+</body>
+</html>
