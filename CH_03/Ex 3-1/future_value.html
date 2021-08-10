@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Future Value Application</title>
+    <script>
+      var again = "y";
+      do {
+        var futureValue;
+
+        //Entries
+        var investment = parseFloat(prompt("Enter investment amount as xxxxx.xx", 10000));
+        var rate;
+        do {
+          rate = parseFloat(prompt("Enter interest rate as xx.x \nGreater than 0 and less than 15", 7.5));
+        } while (isNaN(rate) || rate <= 0 || rate >= 15);
+
+        var years = parseInt(prompt("Enter number of years", 10));
+
+        //Output screen
+        document.write("Investment amount = " + investment);
+        document.write(" Interest rate = " + rate);
+        document.write(" Years = " + years + "<br/>");
+
+        futureValue = investment;
+        var interest;
+        for (var i = 1; i <= years; i++) {
+          interest = (rate * futureValue) / 100;
+          futureValue += interest;
+          futureValue = parseInt(futureValue);
+
+          document.write("Year = " + i);
+          document.write(" Interest = " + interest);
+          document.write(" Value = " + futureValue + "<br/>");
+        }
+        document.write("<br/>");
+        again = prompt("Repeat entries?", "y");
+      } while (again == "y");
+    </script>
+  </head>
+  <body>
+    Thanks for using the Future Value application.
+  </body>
+</html>

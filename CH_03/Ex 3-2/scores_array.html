@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Average Test Scores</title>
+    <script>
+      var entry, average;
+      var scores = [];
+      var total = 0;
+      var highestNumber = 0;
+      var show = "The test scores:\n";
+
+      //Check input
+      do {
+        entry = parseInt(prompt("Enter test score\nOr enter 999 to end entries", 999));
+
+        if (entry >= 0 && entry <= 100) {
+          scores[scores.length] = entry;
+        } else if (entry != 999) {
+          alert("Entry must be a valid number from 0 through 100\n" + "Or enter 999 to end entries");
+        }
+      } while (entry != 999);
+
+      //find average and highest number
+      for (var i = 0; i < scores.length; i++) {
+        total += scores[i];
+        show += scores[i] + "\n";
+
+        if (highestNumber < scores[i]) {
+          highestNumber = scores[i];
+        }
+      }
+
+      average = parseFloat(total / scores.length);
+      alert(show + "\nAverage score is " + average + "\nHighest score is " + highestNumber);
+    </script>
+  </head>
+  <body></body>
+</html>
