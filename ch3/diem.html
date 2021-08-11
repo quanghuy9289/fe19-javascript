@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tính điểm trung bình</title>
+    <link type="text/css" rel="stylesheet" href="styles/main.css" />
+    <script>
+      var tong = 0;
+      var soLan = 0;
+      var diem;
+
+      do{
+          diem = parseInt(prompt("Nhập sô điểm \n Hoặc nhập 999 để kết thúc",999));
+          if(diem >=0 && diem <= 100){
+              tong = tong + diem;
+              soLan++;
+          } else if (diem != 999){
+              alert("Số điểm phải thuộc khoảng 0 đến 100 \n Hoặc nhập 999 để kết thúc");
+          }
+      }
+
+      while(diem != 999);
+      var diemTrungBinh = parseFloat(tong/soLan);
+      alert("Điểm trung bình là: " + diemTrungBinh);
+    </script>
+  </head>
+  <body>
+    <main>
+      <h1>Tính điểm trung bình</h1>
+      
+    </main>
+  </body>
+</html>

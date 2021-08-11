@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Điểm trung bình bằng array</title>
+    <link type="text/css" rel="stylesheet" href="styles/main.css" />
+    <script>
+      
+      var mang = []
+      var tong = 0;
+      var soLan = 0;
+      var diem;
+      var show = "Bảng điểm: \n";
+
+      do{
+          diem = parseInt(prompt("Nhập sô điểm \n Hoặc nhập 999 để kết thúc",999));
+          if(diem >=0 && diem <= 100){
+              mang[mang.length] = diem;
+          } else if (diem != 999){
+              alert("Số điểm phải thuộc khoảng 0 đến 100 \n Hoặc nhập 999 để kết thúc");
+          }
+      }
+
+      while(diem != 999);
+
+      for(var i=0; i < mang.length; i++){
+          tong = tong + mang[i];
+          show = show + mang[i] + "\n";
+          soLan++;
+      }
+
+      var diemTrungBinh = parseInt(tong/soLan);
+      alert(show + "\n Điểm trung bình là: " + diemTrungBinh);
+
+
+    </script>
+  </head>
+  <body>
+    <main>
+      <h1>Tính điểm trung bình bằng array</h1>
+      
+    </main>
+  </body>
+</html>

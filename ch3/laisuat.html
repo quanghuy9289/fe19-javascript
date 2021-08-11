@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tính lãi suất</title>
+    <link type="text/css" rel="stylesheet" href="styles/main.css" />
+    <script>
+      
+      var tuongLai;
+      var banDau = parseFloat(prompt("Nhập số tiền hiện tại", 10000000));
+      var laiSuat = parseInt(prompt("Nhập % lãi suất",7));
+      var soNam = parseInt(prompt("Nhập số năm",10));
+
+      tuongLai = banDau;
+      for (var i = 0; i <= soNam; i++){
+        tuongLai = tuongLai + (tuongLai * laiSuat/100);
+      }
+      
+      tuongLai = parseInt(tuongLai);
+      
+      var diemTrungBinh = parseInt(tong/soLan);
+      alert(show + "\n Điểm trung bình là: " + diemTrungBinh);
+
+
+    </script>
+  </head>
+  <body>
+    <main>
+
+        <script>
+            document.write("Số tiền đầu tư = " + banDau);
+            document.write("<br> Lãi suất = "+ laiSuat);
+            document.write("<br> Số năm = "+ soNam);
+            document.write("<br> Kết quả = " + tuongLai + "<br><br>");
+        </script>
+
+      <h1>Tính lãi suất</h1>
+      
+    </main>
+  </body>
+</html>

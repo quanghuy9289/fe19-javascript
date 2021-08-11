@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Số mile trên gallon</title>
+    <link type="text/css" rel="stylesheet" href="styles/main.css" />
+    <script>
+      
+      var again = "y";
+
+      do{
+          var miles = parseInt(prompt("Số miles đã đi được"));
+          var gallons = parseInt(prompt("Số bình xăng đã dùng"));
+
+          if( !isNaN(miles) && gallons > 0) {
+              var mpq = parseInt(miles / gallons);
+              alert("Số miles trên gallon là: "+mpq);
+          } else {
+              alert("1 trong 2 đầu vào bị sai");
+          }
+
+          again = prompt("Muốn chơi tiếp không? ", "y");
+
+      }
+
+      while(again == "y");
+
+      
+
+    </script>
+  </head>
+  <body>
+    <main>
+      <h1>Tính số mile trên gallon</h1>
+      
+    </main>
+  </body>
+</html>
