@@ -1,3 +1,5 @@
+"use strict";
+
 let entry;
 let average;
 let scores = [];
