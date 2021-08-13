@@ -1,0 +1,62 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: white;
+    margin: 0 auto;
+    width: 720px;
+    padding: 0 2em 1em;
+    border: 3px solid blue;
+}
+
+h1 {
+    color: blue;
+    margin-bottom: .25em;
+    text-align: center;
+}
+
+label {
+    float: left;
+    width: 11em;
+    text-align: right;
+}
+
+input {
+    margin-left: 1em;
+    margin-right: .5em;
+    margin-bottom: .5em;
+    width: 11em;
+}
+
+input[type=button] {
+    padding: 10px 20px;
+    margin: 1rem 0.5rem;
+    color: #fff;
+    font-weight: bold;
+    border: none;
+    border-radius: 20px;
+}
+
+input[name=calculate] {
+    background-color: blue;
+}
+
+input[name=calculate]:hover {
+    background-color: rgb(10, 10, 231);
+    color: cornsilk;
+}
+
+input[name=clear_entries] {
+    background-color: brown;
+}
+
+input[name=clear_entries]:hover {
+    background-color: rgb(160, 11, 11);
+    color: cornsilk;
+}
+
+span {
+    color: red;
+}
+
+div {
+    text-align: center;
+}
