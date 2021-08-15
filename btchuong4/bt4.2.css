@@ -1,0 +1,25 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    margin: 20px auto;
+    width: 800px;
+    border: 2px solid #800000;
+    padding: 10px 10px;
+}
+h2{ 
+    font-size: 200%;
+}
+label{
+    float: left;
+    text-align: right;
+    width: 11em;
+    margin-top: 2px;
+}
+   
+input{
+   width: 11em;
+   margin-top: 5px;
+}
