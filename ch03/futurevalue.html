@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Future Value Application</title>
+  <script>
+    
+    var futureValue;
+    var again = "y";
+
+    do {  
+        do {
+            var investment = parseInt(prompt("Enter investment amount as xxxxx.xx", 10000));
+            if (isNaN(investment) || investment <= 0) {
+                alert("Please enter a number greater than 0.");
+            } else {
+                do {
+                    var rate = parseFloat(prompt("Enter interest rate as xx.x", 5.5));
+                    if (isNaN(rate) || rate <= 0 || rate >= 15) {
+                        alert("Please enter a number greater than 0 and less than 15.");
+                    } else {
+                        do {
+                            var years = parseInt(prompt("Enter number of years", 10));
+                            if (isNaN(years) || years <= 0) {
+                                alert("Please enter a number greater than 0.");
+                            } else {
+                                document.write("Investment amount = " + investment + ";" + " Interest Rate = " + rate + ";" + " Years = " + years + ":" + "<br>");
+                                futureValue = investment;
+                                for (i = 1; i <= years; i++) {
+                                    var interest = futureValue * (rate / 100);
+                                    investment += interest;
+                                    futureValue = investment;
+                                    document.write("Year = " + i + ";" + " Interest = " + interest + ";" + " Value = " + parseInt(futureValue) + "." + "<br>");
+                                } document.write("<br>");
+                            }
+                        } while (isNaN(years) || years <= 0);
+                    }
+                } while (isNaN(rate)|| rate <= 0 || rate >= 15);       
+            } 
+        } while (isNaN(investment) || investment <= 0); 
+
+        again = prompt("Do it again?", "y");
+    } while (again == "y");
+  </script>
+</head>
+<body>
+  <p>Thanks for using the Future Value application.</p>
+</body>
+</html>
