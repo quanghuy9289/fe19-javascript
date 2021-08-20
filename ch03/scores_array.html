@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Average Test Scores</title>
+    <script>
+        var entry;
+        var total = 0;
+        var average;
+        var show = "The Test score \n";
+        var score = [];
+        var highestscore = 0;
+
+        do {
+            entry = parseFloat(prompt("nhap gia tri", "999"));
+            if (entry > 0 && entry < 100) {
+                score[score.length] = entry
+            } else if (entry != "999") {
+                alert("number must be greater 0 and lower 100");
+            }
+        } while (entry != 999);
+
+        for (var i = 0; i < score.length; i++) {
+            total = total + score[i];
+            show = show + score[i] + "\n";
+            // if (highestscore < score[i]) {
+            //     highestscore = score[]
+            // }
+        }
+
+        average = (total / score.length);
+        for (var i = 0; i < score.length; i++) {
+            highestscore < score[i];
+            highestscore = score[i];
+        };
+        alert(show + "\n gia tri trung binh bang:" + average + "\n gia tri lon nhat bang:" + highestscore);
+    </script>
+
+</head>
+
+<body>
+    <main>
+        <!-- Will show after JavaScript has run -->
+        <h1>Thanks for using the Test Scores application!</h1>
+    </main>
+</body>
+
+</html>
