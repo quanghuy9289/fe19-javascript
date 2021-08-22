@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Exercise 01</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script>
+            alert("Write a JavaScript conditional statement to find the largest of five numbers. Display an alert box to show the result.");
+        </script>
+    </head>
+    <body>
+        <script>
+                var max = 0;
+                var n = [];
+                for (var i = 1; i <= 5; i++ ) {
+                    n[i] = prompt("Enter the number " + i);
+                    if (!isNaN(n[i])) {
+                        if (parseInt(n[i]) >= max) {
+                            max = n[i];
+                        }
+                    } else {
+                        alert("Valid number");
+                        i--;
+                    }
+                }
+                alert("Max number is: " + max);
+        </script>
+    </body>
+</html>

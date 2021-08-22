@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Exercise 02</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script>
+            alert("Write a JavaScript program which iterates the integers from 1 to 100. But for multiples of three print Fizz instead of the number and for the multiples of five print Buzz. For numbers which are multiples of both three and five print FizzBuzz.");
+        </script>
+    </head>
+    <body>
+        <script>
+            for (var i = 1; i <= 100; i++) {
+                var mod3 = i % 3;
+                var mod5 = i % 5;
+                if (mod3 == 0) {
+                    if (mod5 == 0) {
+                        document.write("FizzBuzz<br>");
+                    } else {
+                        document.write("Fizz<br>");
+                    }
+                } else if (mod5 == 0) {
+                    document.write("Buzz<br>");
+                } else {
+                    document.write(i + "<br>");
+                }
+            }
+        </script>
+    </body>
+</html>

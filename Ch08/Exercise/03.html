@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Exercise 03</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script>
+            alert("Write a JavaScript program that computes, the average marks of the following students. Then, this average is used to determine the corresponding grade\nStudent Name Marks\nDavid 80\nVinoth 77\nDivya 88\nIshitha 95\nThomas 68\nThe grades are computed as follows:\nRange Grade\n<60 F\n<70 D\n<80 C\n<90 B\n<100 A");
+        </script>
+    </head>
+    <body>
+        <script>
+            var n = [80, 77, 88, 95, 68];
+            var average = 0;
+            var total = 0;
+            var grade = "";
+            for (i = 0; i < n.length; i++) {
+                total += n[i];
+            }
+            average = total / n.length;
+            if (average < 60) {
+                grade = "F";
+            } else if (average < 70) {
+                grade = "D";
+            } else if (average < 80) {
+                grade = "C";
+            } else if (average < 90) {
+                grade = "B";
+            } else {
+                grade = "A";
+            }
+            document.write("Average: " + average + "<br>Grade: " + grade);
+        </script>
+    </body>
+</html>
