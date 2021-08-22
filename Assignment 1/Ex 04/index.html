@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>The quadratic equation 2</title>
+    <link rel="stylesheet" href="../vendor/bootstrap/css/bootstrap.min.css" />
+    <script src="solve.js"></script>
+  </head>
+  <body>
+    <div class="container text-center my-5 py-5 border shadow" style="width: 500px">
+      <h2>Find x from ax<sup>2</sup> + bx + c = 0</h2>
+      <br />
+      <div class="form-group">
+        <label class="lead font-weight-bold text-right" for="a">a :</label>
+        <input type="text" name="a" id="a" />
+      </div>
+      <div class="form-group">
+        <label class="lead font-weight-bold text-right" for="b">b :</label>
+        <input type="text" name="b" id="b" />
+      </div>
+      <div class="form-group">
+        <label class="lead font-weight-bold text-right" for="c">c :</label>
+        <input type="text" name="c" id="c" />
+      </div>
+
+      <input class="btn-primary btn-lg" type="button" id="solve" value="Solve" />
+      <br /><br />
+      <p class="text-danger font-weight-bold" id="error"></p>
+      <p class="text-success font-weight-bold" id="result"></p>
+    </div>
+  </body>
+</html>
