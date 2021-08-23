@@ -1,5 +1,7 @@
 "use strict";
-var $ = function(id) { return document.getElementById(id); };
+var $ = function(id) {
+    return document.getElementById(id);
+};
 
 var getRandomNumber = function(max) {
     var random;
@@ -18,18 +20,17 @@ var averageRolls = function() {
     var max = -Infinity;
     var rolls;
 
-    while (count < 10000) {
-        rolls = 1;
-        while (getRandomNumber(6) !== 6) {
+    for (count; count < 10000; count++) {
+        rolls = 0;
+        do {
             rolls++;
-        }
+        } while (getRandomNumber(6) !== 6);
         total += rolls;
-        count++;
         if (rolls > max) max = rolls;
     }
     var average = total / count;
     alert("Average rolls: " + average.toFixed(0) + "\n\nMax rolls: " + max);
-}
+};
 
 // display factors
 var displayFactors = function() {
@@ -41,28 +42,47 @@ var displayFactors = function() {
         }
     }
     alert("Factors of ".concat(number, ": ", factors));
-}
+};
 
 // determine if a number is prime
 var determineIfPrime = function() {
     var number = $("number").value;
-    var prime = true;
-    var message;
+    var prime = isPrime(number);
+    var message = prime == 0 ? number + " is not prime." : number + " is prime.";
+
+    $("primes").value = message;
+};
+
+var isPrime = function(number) {
+    var prime = 1;
     for (var i = 2; i < number; i++) {
-        if (number % i === 0) prime = false;
+        if (number % i == 0) {
+            prime = 0;
+            break;
+        }
     }
-    if (prime) {
-        message = number + " is prime.";
-    } else {
-        message = number + " is not prime.";
+    return prime;
+};
+
+var getPrimeNumbers = function() {
+    var number = $("number").value;
+    var count = 0;
+    var result = "";
+    for (var i = 2; i <= number; i++) {
+        if (isPrime(i)) {
+            count++;
+            result += i + " ";
+        }
     }
-    alert(message);
-}
+    $("count").value = count;
+    $("primes").value = result;
+};
 var processEntries = function() {
-    averageRolls();
+    //averageRolls();
     displayFactors();
-    determineIfPrime();
-}
+    //determineIfPrime();
+    getPrimeNumbers();
+};
 
 window.onload = function() {
     $("calculate").onclick = processEntries;
