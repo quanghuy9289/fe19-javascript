@@ -9,13 +9,13 @@ var displayTaskList = function() {
         tasks = getStorage("tasks_10");
     }
     // display sorted tasks with delete links
-    displaySortedTaskList(tasks, $("tasks"), deleteFromTaskList);
+    displaySortedTaskList(tasks, $("tasks"), deleteFromTaskList, editTaskListItem);
 
     // set focus on task text box
     $("task").focus();
 };
 
-var addToTaskList = function() {   
+var addToTaskList = function() {
     var task = $("task");
     if (task.value === "") {
         alert("Please enter a task.");
@@ -35,9 +35,11 @@ var deleteFromTaskList = function() {
 };
 
 var editTaskListItem = function() {
-    var newText = prompt("Please enter new text", tasks[this.title]);  // 'this' = clicked link
+    var newText = prompt("Please enter new text", tasks[this.title]); // 'this' = clicked link
     if (newText) {
-        /* code goes here */
+        editTask(tasks, this.title, newText);
+        setStorage("tasks_10", tasks);
+        displayTaskList();
     }
 };
 
@@ -50,6 +52,6 @@ var clearTaskList = function() {
 
 window.onload = function() {
     $("add_task").onclick = addToTaskList;
-    $("clear_tasks").onclick = clearTaskList;   
+    $("clear_tasks").onclick = clearTaskList;
     displayTaskList();
 };

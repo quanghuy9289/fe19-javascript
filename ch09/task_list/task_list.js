@@ -72,7 +72,7 @@ var setName = function() {
     displayTaskList();
 }
 
-var importantTasks = function(element) {
+var importantTasks = function(element3) {
     var lower = element.toLowerCase();
     var index = lower.indexOf("important!");
     element = (index !== -1) ? true : false;
