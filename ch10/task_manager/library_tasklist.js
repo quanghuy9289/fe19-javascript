@@ -25,10 +25,11 @@ var displaySortedTaskList = function(tasks, div, deleteHandler, editHandler) {
         // get links, loop and add onclick event handler
         var links = div.getElementsByTagName("a");
         for (var i = 0; i < links.length; i++) {
-            if (links[i].title != "") {
-                links[i].onclick = editHandler;
-            } else {
+            if (links[i].id) {
                 links[i].onclick = deleteHandler;
+            } else {
+                links[i].onclick = editHandler;
+
             }
         }
     }
