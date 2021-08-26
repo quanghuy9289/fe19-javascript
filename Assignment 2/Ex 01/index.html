@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Manage a Array</title>
+    <link rel="stylesheet" href="../vendor/bootstrap/css/bootstrap.min.css" />
+    <script src="../vendor/jquery/jquery.min.js"></script>
+    <script src="../vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="library_array.js"></script>
+    <script src="main.js"></script>
+  </head>
+  <body>
+    <div class="container text-center my-5 py-5 border shadow" style="width: 600px">
+      <h2>Manage an Array</h2>
+      <div class="text-left ml-5 pl-5">
+        <br />
+        <a id="function1" href="#" onclick="func1()"><h4>1. Print array</h4></a>
+        <a id="function2" href="#" data-toggle="collapse" data-target="#search"><h4>2. Search a member</h4></a>
+        <div id="search" class="ml-4 form-group collapse">
+          <input type="text" name="member" id="member" placeholder="Enter a Number" />
+          <input class="btn-primary" onclick="func2()" type="button" value="Search" />
+          <p id="error" class="text-danger"></p>
+        </div>
+        <a id="function3" href="#" onclick="func3()"><h4>3. Find maximum number</h4></a>
+        <a id="function4" href="#" onclick="func4()"><h4>4. Calculate sum of all elements</h4></a>
+        <a id="function5" href="#" onclick="func5()"><h4>5. Sort all elements by descending</h4></a>
+      </div>
+      <hr class="w-75" />
+
+      <p class="font-weight-bold lead text-success" id="result"></p>
+    </div>
+  </body>
+</html>
