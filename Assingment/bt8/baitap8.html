@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./bt8.css">
+    <script>
+        "use strict"
+        var $ = function (id) {
+            return document.getElementById(id)
+        };
+        var processEntries = function () {
+            var dt = parseInt($("month").value);
+            switch (dt) {
+                case 1:
+                case 3:
+                case 5:
+                case 7:
+                case 8:
+                case 10:
+                case 12:
+                    $("message").innerHTML = 31;
+                    break;
+                case 2:
+                    $("message").innerHTML = 28;
+                    break;
+                case 4:
+                case 6:
+                case 9:
+                case 11:
+                    $("message").innerHTML = 30;
+                    break;
+                default:
+                    alert("please input number in a range");
+                    break;
+            }
+        }
+        var clearEntries = function () {
+            $("month").value = "";
+            $("message").innerHTML = "";
+        }
+        window.onload = function () {
+            $("submit").onclick = processEntries;
+            $("reset").onclick = clearEntries;
+
+        }
+    </script>
+</head>
+
+<body>
+    <form action="" method="get">
+        <h2>check date of the month in current years</h2>
+        <label for="month">Month:</label>
+        <input type="text" id="month"> <br>
+        <input type="button" value="submit" id="submit">
+        <input type="button" value="reset" id="reset">
+        <p id="message"></p>
+    </form>
+</body>
+
+</html>

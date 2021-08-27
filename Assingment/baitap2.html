@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var a = parseFloat(prompt("nhap diem mon toan:"));
+        var b = parseFloat(prompt("nhap diem mon ly:"));
+        var c = parseFloat(prompt("nhap diem mon hoa:"));
+        var average;
+        var rank;
+        average = (a + b + c) / 3;
+        if (average >= 8) {
+            rank = "A";
+            alert("rank: " + rank);
+        } else if (average >= 6.5) {
+            rank = "B";
+            alert("rank: " + rank);
+        } else if (average >= 5) {
+            rank = "C";
+            alert("rank: " + rank);
+        } else {
+            rank = "D";
+            alert("rank: " + rank);
+        };
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

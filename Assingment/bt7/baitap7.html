@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./bt7.css">
+    <script>
+        "use strict"
+        var $ = function (id) {
+            return document.getElementById(id);
+        }
+        var processEntries = function () {
+            var code = $("code").value;
+            var name = $("name").value;
+            var age = $("age").value;
+            var sex = "";
+            var html = "";
+            var allValid = true;
+            if ($("code").value == "") {
+                $("code_error").firstChild.nodeValue = "fields is requried";
+            } else if (isNaN(code)) {
+                $("code_error").firstChild.nodeValue = "Code must be numberic";
+                allValid = false;
+            } else {
+                $("code_error").firstChild.nodeValue = "";
+            }
+            ///////
+            if ($("name").value == 0) {
+                $("name_error").firstChild.nodeValue = "fields is requried";
+            } else if (!isNaN(name)) {
+                $("name_error").firstChild.nodeValue = "Name don't must be numberic"
+                allValid = false;
+            } else {
+                $("name_error").firstChild.nodeValue = " ";
+            }
+            ////////
+            if ($("age").value == "") {
+                $("age_error").firstChild.nodeValue = "fields is requried";
+            } else if (isNaN(age)) {
+                $("age_error").firstChild.nodeValue = "Age must be numberic";
+                allValid = false;
+            } else {
+                $("age_error").firstChild.nodeValue = " ";
+            }
+
+            //////////
+            if ($("sex_male").checked) {
+                sex = "male";
+            }
+            if ($("sex_female").checked) {
+                sex = "female";
+            }
+
+            html += "<tr><td>Student Code: </td><td>" + code + "</td></tr>";
+            html += "<tr><td>Student Name: </td><td>" + name + "</td></tr>";
+            html += "<tr><td>Student Age: </td><td>" + age + "</td></tr>";
+            html += "<tr><td>Student Sex: </td><td>" + sex + "</td></tr>";
+            $("table").innerHTML = html;
+
+            // if (allValid = true) {
+            //     $("form").submit();
+            // }
+            // document.getElementById("message").innerHTML = code;
+            // if (true) {
+            //     // add data for table
+            //     html += "<tr><td>Student Code: </td><td>" + code + "</td></tr>";
+            //     html += "<tr><td>Student Name: </td><td>" + name + "</td></tr>";
+            //     html += "<tr><td>Student Age: </td><td>" + age + "</td></tr>";
+            //     html += "<tr><td>Student Sex: </td><td>" + sex + "</td></tr>";
+
+
+            //     $("table").innerHTML = html;
+
+
+        };
+        var clearEntries = function () {
+            $("code_error").firstChild.nodeValue = "";
+            $("name_error").firstChild.nodeValue = "";
+            $("age_error").firstChild.nodeValue = "";
+            $("code").value = "";
+            $("name").value = "";
+            $("age").value = "";
+            $("table").innerHTML = ""
+
+
+
+        }
+        window.onload = function () {
+            $("submit").onclick = processEntries;
+            $("reset").onclick = clearEntries;
+        }
+
+
+
+    </script>
+</head>
+
+<body>
+    <main>
+        <h1>Manager Student Information</h1>
+        <form action="" method="get" id="form_manage">
+            <label for="code">Student Code:</label>
+            <input type="text" name="" id="code">
+            <span id="code_error">*</span><br>
+            <label for="name">Student Name:</label>
+            <input type="text" name="" id="name">
+            <span id="name_error">*</span><br>
+            <label for="age">Student Age:</label>
+            <input type="text" name="" id="age">
+            <span id="age_error">*</span><br>
+            <label for="sex">Student Sex:</label>
+            <input type="radio" name="sex" id="sex_male" value="male" checked>Male
+            <input type="radio" name="sex" id="sex_female" value="female">Female <br>
+            <input id="submit" type="button" value="Submit">
+            <input id="reset" type="button" value="reset"> <br>
+            <p id="message"></p>
+            <table id="table"></table>
+        </form>
+
+    </main>
+
+</body>
+
+</html>

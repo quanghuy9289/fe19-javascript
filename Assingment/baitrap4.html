@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var a = parseFloat(prompt("nhap gia tri cua a:"));
+        var b = parseFloat(prompt("nhap gia tri cua b:"));
+        var c = parseFloat(prompt("nhap gia tri cua c:"));
+        var x1;
+        var x2;
+        var delta;
+        if (a == 0) {
+            var x = - c / b;
+            alert("gia tri cua x:" + x)
+        }
+        if (a != 0) {
+            delta = b * b - 4 * a * c;
+            if (delta > 0) {
+                x1 = (-b + Math.sqrt(delta)) / (2 * a);
+                x1 = x1.toFixed(2);
+                x2 = (-b - Math.sqrt(delta)) / (2 * a);
+                x2 = x2.toFixed(2);
+                alert("x1:" + x1 + "x2:" + x2)
+            }
+            if (delta == 0) {
+                k = -b / 2 * a;
+                k = k.toFixed(2);
+                alert("x1=x2= " + k)
+            }
+            if (delta < 0) {
+                alert("phuong trinh vo nghiem");
+            }
+
+        }
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
