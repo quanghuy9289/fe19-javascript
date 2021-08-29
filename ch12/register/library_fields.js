@@ -18,6 +18,11 @@ var fields = {
     last_name: {
         required: "Last name is required."
     },
+    phone: {
+        message: "Use 555-123-4567 format",
+        required: "Phone number is required",
+        isPhone: "Phone number is not valid"
+    },
     zip: {
         message: "Use 5 or 9 digit ZIP code.",
         required: "ZIP Code is required.",
@@ -28,7 +33,7 @@ var fields = {
         required: "Card number is required.",
         isCC: "Card number is invalid."
     },
-    exp_date : {
+    exp_date: {
         message: "Use mm/yyyy format.",
         required: "Expiration date is required.",
         isDate: "Expiration date is invalid.",

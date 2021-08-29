@@ -16,6 +16,9 @@ RegisterForm.prototype.validateField = function(fieldName, text) {
     if (field.isEmail) {
         if (!this.isEmail(text)) { throw new Error(field.isEmail); }
     }
+    if (field.isPhone) {
+        if (!this.isPhone(text)) { throw new Error(field.isPhone); }
+    }
     if (field.isZip) {
         if (!this.isZip(text)) { throw new Error(field.isZip); }
     }

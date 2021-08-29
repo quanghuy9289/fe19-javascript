@@ -3,18 +3,20 @@ var $ = function(id) {
     return document.getElementById(id);
 };
 
-try {
-    var calculateFV = function(investment, rate, years) {
+var calculateFV = function(investment, rate, years) {
+    try {
         var futureValue = investment;
         for (var i = 1; i <= years; i++) {
             futureValue += futureValue * rate / 100;
         }
         futureValue = futureValue.toFixed(2);
+        throw new RangeError("Error in Future Value calculation");
         return futureValue;
-    };
-} catch (error) {
-    alert(error.message)
-}
+    } catch (error) {
+        // alert("Error message = " + error.message + "\nError name = " + error.name);
+        throw error;
+    }
+};
 
 var processEntries = function() {
     var investment = parseFloat($("investment").value);
@@ -41,7 +43,11 @@ var processEntries = function() {
         $("years_error").firstChild.nodeValue = "";
     }
     if (allValid) {
-        $("future_value").value = calculateFV(investment, rate, years);
+        try {
+            $("future_value").value = calculateFV(investment, rate, years);
+        } catch (error) {
+            alert("Error message = " + error.message + "\nError name = " + error.name);
+        }
     }
 };
 
