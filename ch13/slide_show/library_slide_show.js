@@ -7,25 +7,25 @@ var slideshow = {
     speed: 2000,
     loadImages: function(slides) {
         var image;
-        for ( var i in slides ) {
+        for (var i in slides) {
             // Preload image, copy title properties, and save in array
             image = new Image();
             image.src = slides[i].href;
             image.title = slides[i].title;
-            this.img.cache.push( image );
+            this.img.cache.push(image);
         }
         return this;
     },
     startSlideShow: function() {
-        if (arguments.length === 2) { 
-            this.nodes.image = arguments[0]; 
+        if (arguments.length === 2) {
+            this.nodes.image = arguments[0];
             this.nodes.caption = arguments[1];
         }
         this.timer = setInterval(this.displayNextImage.bind(this), this.speed);
         return this;
     },
     stopSlideShow: function() {
-        clearInterval( this.timer );
+        clearInterval(this.timer);
         return this;
     },
     displayNextImage: function() {
@@ -35,16 +35,27 @@ var slideshow = {
         this.nodes.caption.firstChild.nodeValue = image.title;
     },
     setPlayText: function(a) {
-        a.text = (this.play)? "Resume": "Pause";
+        a.text = (this.play) ? "Resume" : "Pause";
         return this;
     },
-    togglePlay: function(e) {        
-		if ( slideshow.play ) { 
-			slideshow.stopSlideShow().setPlayText(this); 
-		} else { 
-			slideshow.startSlideShow().setPlayText(this); 
-		}
-		slideshow.play = ! slideshow.play; //toggle play flag
-		evt.preventDefault(e);  
+    togglePlay: function(e) {
+        if (slideshow.play) {
+            slideshow.stopSlideShow().setPlayText(this);
+        } else {
+            slideshow.startSlideShow().setPlayText(this);
+        }
+        slideshow.play = !slideshow.play; //toggle play flag
+        evt.preventDefault(e);
+    },
+    changeSpeed: function(e) {
+        // code to change the slide show speed goes here
+        var milliseconds = prompt("Current speed is " + slideshow.speed + " " + "milliseconds.\nPlease enter new slide show speed");
+        milliseconds = parseFloat(milliseconds);
+        if (isNaN(milliseconds) || milliseconds < 0) {
+            alert("The Speed must be a number greater than or equal 0");
+        } else {
+            slideshow.speed = milliseconds;
+            slideshow.stopSlideShow().startSlideShow();
+        }
     }
 };

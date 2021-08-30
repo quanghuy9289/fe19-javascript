@@ -1,4 +1,5 @@
 "use strict";
+// Default event delete function
 var evt = {
     attach: function(node, eventName, func) {
         if (node.addEventListener) {
@@ -16,7 +17,6 @@ var evt = {
     },
     preventDefault: function(e) {
         e = e || window.event;
-        if ( e.preventDefault ) { e.preventDefault(); }
-        else { e.returnValue = false; }
+        if (e.preventDefault) { e.preventDefault(); } else { e.returnValue = false; }
     }
 };
