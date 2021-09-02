@@ -7,10 +7,54 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Application to manage student’s information</title>
     <script src="js/student.js"></script>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-
+    <main>
+        <div class="top" style="text-align: center;">
+            Input student detail information
+        </div>
+        <form>
+            <ul>
+                <li>
+                    <div style="font-weight: bold; font-family: Arial, Helvetica, sans-serif;">Student Code</div>
+                    <input type="text" style="width: 706px;height: 22px;background-color:#f7f69e;border: 1px solid grey;" id="code"><br>
+                    <span id="code_error"></span>
+                </li>
+                <li>
+                    <div style="font-weight: bold; font-family: Arial, Helvetica, sans-serif;">Student Name</div>
+                    <input type="text" style="width: 712px;height: 29px;border: 1px solid grey;" id="name"><br>
+                    <span id="name_error"></span>
+                </li>
+                <li>
+                    <div style="font-weight: bold; font-family: Arial, Helvetica, sans-serif;">Gender</div>
+                    Male: <input type="radio" id="male" name="gender"> Female: <input type="radio" name="gender" id="female">
+                    <span id="gender_error"></span>
+                </li>
+                <li>
+                    <div style="font-weight: bold; font-family: Arial, Helvetica, sans-serif;">Student Age</div>
+                    <input type="text" style="width: 706px;height: 22px;border: 1px solid grey;" id="age"><br>
+                    <span id="age_error"></span>
+                </li>
+                <div style="display: flex;">
+                    <button type="button" style="background-color: #6895e3" id="submit">Add products</button>
+                    <button style="background-color: #e6d08a" type="reset" id="reset_btn">Reset</button>
+                </div>
+            </ul>
+        </form>
+    </main>>
+    <div id="list">
+        <table class="table">
+            <tr>
+                <th scope="col">Code</th>
+                <th scope="col">Name</th>
+                <th scope="col">Age</th>
+                <th scope="col">Gender</th>
+            </tr>
+            <tbody id="studentList"></tbody>
+        </table>
+    </div>
 </body>
 
 </html>

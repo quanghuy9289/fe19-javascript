@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Greatest common divisor</title>
+    <script src="divisor.js"></script>
+</head>
+<style>
+    * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+    }
+    
+    main {
+        width: 540px;
+        margin: 0 auto;
+        border: 4px solid blue;
+        padding: 30px;
+        text-align: center;
+    }
+    
+    h2 {
+        margin-bottom: 30px;
+    }
+    
+    label {
+        float: left;
+        width: 220px;
+        text-align: right;
+    }
+    
+    input {
+        margin-bottom: 15px;
+    }
+    
+    input[type=button] {
+        padding: 5px 10px;
+        margin-bottom: 0;
+    }
+</style>
+
+<body>
+    <main>
+        <h2>Greatest common divisor</h2>
+        <form action="">
+            <label for="month">Number a :</label>
+            <input type="text" name="number_a" id="number_a" /><br>
+            <label for="month">Number b :</label>
+            <input type="text" name="number_b" id="number_b" /><br>
+            <label for="days">Greatest common divisor :</label>
+            <input type="text" name="divisor" id="divisor" disabled /><br>
+            <input type="button" id="submit" value="Result">
+        </form>
+    </main>
+</body>
+
+</html>
