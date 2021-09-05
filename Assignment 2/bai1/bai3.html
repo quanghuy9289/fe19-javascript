@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var score = new Array(10);
+
+        var maxnumber = function () {
+            var max = 0;
+            for (var i = 0; i < score.length; i++) {
+                var entry = parseInt(prompt("nhap cac gia tri"));
+                score[i] = entry;
+                if (max < score[i]) {
+                    max = score[i];
+                }
+            }
+            return max;
+        };
+        window.onload = function () {
+            document.getElementById("print").innerHTML = maxnumber();
+        }
+    </script>
+</head>
+
+<body>
+    <p id="print"></p>
+</body>
+
+</html>

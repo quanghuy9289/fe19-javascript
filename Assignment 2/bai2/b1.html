@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var sOut = "<table border=2>";
+        for (var y = 0; y < 5; y++) { // for each row
+            sOut += "<tr>";
+            for (var x = 0; x < 3; x++) { // for each clm
+                sOut += "<td>" + as2D[y][x] + "</td>";
+            }
+            sOut += "</tr>";
+        }
+        sOut += "</table>";
+        // var createFT = function () {
+        //     var n = parseInt(prompt("nhap so hang"));
+        //     var m = parseInt(prompt("nhap so cot"));
+        //     var new123 = []
+        //     new123.length = n;
+        //     for (i = 0; i < n; i++) {
+        //         var new123[i] = new Array()
+        //         new123[i].length = m;
+        //     }
+        //     return new123;
+        // }
+
+
+        window.onload = function () {
+            document.getElementById("table").innerHTML = sOut;
+        }
+    </script>
+</head>
+
+<body>
+    <table id="table"></table>
+
+</body>
+
+</html>
