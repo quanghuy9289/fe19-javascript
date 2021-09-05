@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./bt.css">
+    <script>
+        "use strict"
+        var $ = function (id) {
+            return document.getElementById(id);
+        }
+        var arr = []
+        function processEntries() {
+            var name = $("name").value;
+            // if (!isNaN(name)) {
+            //     alert("nhap ten cua cac hoc sinh")
+            // }
+
+            arr = name.split(" ");
+            var b = arr.sort()
+            $("para").innerHTML = b.toString();
+        }
+
+
+        window.onload = function () {
+            $("submit").onclick = processEntries
+        }
+
+
+    </script>
+</head>
+
+<body>
+    <h1>Student Name</h1>
+    <label for="name">Student Name:</label><br>
+    <input type="text" id="name">
+    <input type="button" value="submit" id="submit">
+    <p id="para">Sort Member:</p>
+</body>
+
+</html>

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var array = new Array(10);
+        for (var i = 0; i < 10; i++) {
+            array[i] = parseInt(prompt("nhap so tu ban phim: "));
+        }
+
+        function printMember() {
+            alert(array)
+        }
+        // printMember()
+
+
+
+        function findMember(array) {
+            var num = parseInt(prompt("nhap so can tim:"))
+            if (isNaN(num) || num < 0) {
+                alert("num phai la mot so duong")
+            } else if (array.indexOf(num) == -1) {
+                alert(num + " NOT include Array")
+            } else {
+                alert(num + " is on Array ")
+            }
+
+        }
+        // findMember()
+
+
+        function maxMember(array) {
+            var a = Math.max.apply(null, array);
+            alert(a);
+        }
+        // maxMember()
+
+        function sum(array) {
+            var total = 0;
+            for (var i = 0; i < array.length; i++) {
+                total += array[i];
+            }
+            alert(total)
+        }
+        // sum()
+        function sortMember(array) {
+            document.write(array.sort(
+                function (a, b) { return (b - a) }))
+
+        }
+        // sortMember(array)
+        var showMenu = function () {
+            do {
+                var menu = "1.Print Array\n";
+                menu += "2. Search a member\n";
+                menu += "3. Find Maximum Number \n";
+                menu += "4. Sum of all elements in array\n";
+                menu += "5. Sort Member\n";
+
+
+                var item = parseInt(prompt(menu + "Select menu item:", 1));
+                if (isNaN(item) || item < 1 || item > 5) {
+                    alert("Please enter valid menu item");
+                } else {
+                    switch (item) {
+                        case 1: {
+                            printMember();
+                            break;
+                        }
+                        case 2: {
+                            findMember(array);
+                            break;
+                        }
+                        case 3: {
+                            maxMember(array);
+                            break;
+                        }
+                        case 4: {
+                            sum(array);
+                            break;
+                        }
+                        case 5: {
+                            sortMember(array);
+                            break;
+                        }
+                    }
+                }
+            } while (item !== 5);
+        };
+        window.onload = function () {
+            showMenu();
+        };
+
+
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
