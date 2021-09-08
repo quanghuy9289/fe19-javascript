@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Membership form</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        $(function () {
+            var searchBox = $("#search");
+            var searchTerm;
+            $("#btnSearch").click(function (){
+                searchTerm = "";
+                if(searchBox.val().trim()==""){
+                    alert("Vui lòng nhập từ khóa tìm kiếm");
+                } else {
+                    searchTerm = searchBox.val().trim();
+ 
+                    var url = "https://www.flickr.com/services/feeds/photos_public.gne?format=json&jsoncallback=?&tags=" + searchTerm + "&tagmode=all";
+                }
+
+                $.getJSON(url, function(data) {
+                    var html = "";
+
+                    $.each(data.items, function(i, item) {
+                        html += "<h2>" + item.title + "</h2>";
+                        html += "<img src=" + item.media.m + ">";
+                        html += "<p><b>Từ khóa: </b>" + item.tags + "</p>";
+                    });
+                    $("#photos").html(html);
+                }); 
+            });
+        })
+    </script>
+  </head>
+  <body>
+    <main>
+        <h1>Flickr</h1>
+        Từ khóa tìm kiếm: <input type="text" size="30" id="search" />
+        <input type="button" value="Search" id="btnSearch" />
+        <h1>Kết quả</h1>
+        <div id="photos"></div>
+    </main>
+    
+  </body>
+</html>
