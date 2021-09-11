@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exe 03</title>
+</head>
+<body>
+    <script>
+        var list = [];
+        var i = 0;
+        var again = true;
+        do {
+            var name = prompt("Enter name: ");
+            if(!isNaN(name)) {
+                alert("Please enter a valid name");
+            } else {
+                list[i] = name; 
+                i++;
+            }
+            again = confirm("Enter more?")
+        } while(again == true);
+    
+        if(again == false) {
+            list.sort();
+            alert("Sort ascending by name: " + "\n" + list.join("\n"));
+        };
+    </script>
+</body>
+</html>
