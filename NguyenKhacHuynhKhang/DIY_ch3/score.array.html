@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      var scoreArray = [];
+      var total = 0;
+      do {
+        var entry = prompt(
+          "Please enter test score Or enter 999 to end entries"
+        );
+        entry = parseFloat(entry);
+        if (entry > 0 && entry < 100) {
+          scoreArray[scoreArray.length] = entry;
+        } else if (entry !== 999) {
+          alert(
+            "Entry must by a valid number from 0 through 100\n" +
+              "Or enter 999 to end entries"
+          );
+        }
+      } while (entry !== 999);
+      for (var i = 0; i < scoreArray.length; i++) {
+        total = total + scoreArray[i];
+        document.write(scoreArray[i] + '<br />')
+      }
+      var average = parseFloat(total/scoreArray.length)
+      document.write('Total Score: ' + total + '<br />')
+      document.write('Average Score: ' + average + '<br />')
+      
+    </script>
+  </body>
+</html>

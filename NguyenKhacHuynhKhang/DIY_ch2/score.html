@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Score</title>
+  </head>
+  <body>
+    <h1>The Test Scores App</h1>
+    <script>
+      var entry;
+      var average;
+      var listScore = [];
+      var total = 0;
+      entry = prompt("Please enter a first score");
+      var score1 = parseFloat(entry);
+      listScore.push(score1);
+      entry = prompt("Please enter a second score");
+      var score2 = parseFloat(entry);
+      listScore.push(score2);
+      entry = prompt("Please enter a second score");
+      var score3 = parseFloat(entry);
+      listScore.push(score3);
+      for (var score of listScore) {
+        total = total + score;
+      }
+      total = parseInt(total);
+      average = parseInt(total / listScore.length);
+      document.write('First score: ' + score1 + '<br />')
+      document.write('Second score: ' + score2 + '<br />')
+      document.write('Third score: ' + score3 + '<br />')
+      document.write('Total score: ' + total + '<br />')
+      document.write('Average score: ' + average + '<br />')
+    </script>
+    Thanks for using the Test Scores application!
+  </body>
+</html>

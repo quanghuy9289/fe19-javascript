@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      alert("Find x from ax^2 + bx + c = 0");
+      var a = parseFloat(prompt("Enter the number a"));
+      var b = parseFloat(prompt("Enter the number b"));
+      var c = parseFloat(prompt("Enter the number c"));
+      var delta = b * b - 4 * a * c;
+      if (delta < 0) {
+        alert("Phuong trinh vo nghiem");
+      } else if (delta === 0) {
+        var x = (-b / 2) * a;
+        alert("Phuong trinh nghiem kep x = " + x);
+      } else {
+        var x1 = ((-b + Math.sqrt(delta)) / (2 * a)).toFixed(2);
+        var x2 = ((-b - Math.sqrt(delta)) / (2 * a)).toFixed(2);
+        alert("Phuong trinh co 2 nghiem \n" + "x1 = " + x1 + "\n x2 = " + x2);
+      }
+    </script>
+  </body>
+</html>

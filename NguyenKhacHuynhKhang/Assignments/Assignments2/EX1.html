@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button id="print">Print</button>
+    <button id="find">Find</button>
+    <button id="max">Max</button>
+    <button id="sum">Sum</button>
+    <button id="sort">Sort</button>
+    <script>
+      // 1:
+      var array = [];
+      while (array.length < 10) {
+        var element = parseInt(prompt("Please enter a integer number"));
+        // array[array.length] = element;
+        array.push(element);
+      }
+      //   alert(array)
+      // 2:
+      function print(array) {
+        alert(array);
+      }
+      //   print(array)
+      //3:
+      function find(array) {
+        var number = parseInt(
+          prompt("Enter a number you wanna find in this array")
+        );
+        if (array.indexOf(number) !== -1) {
+          alert("This is exist in array");
+        } else {
+          alert("This is not exist in array");
+        }
+      }
+      //   find(array)
+      //4:
+      function max(array) {
+        var max = array[0];
+        for (var i = 1; i < array.length; i++) {
+          if (array[i] > max) {
+            max = array[i];
+          }
+        }
+        alert("Max :" + max);
+      }
+      //   max(array)
+      function sum(array) {
+        var total = 0;
+        for (var i = 0; i < array.length; i++) {
+          total += array[i];
+        }
+        alert("Total: " + total);
+      }
+      // sum(array)
+      function sort(array) {
+        // for (var i = 0; i < array.length; i++) {
+        //   if (array[i] > array[i + 1]) {
+        //     var c;
+        //     c = array[i];
+        //     array[i] = array[i + 1];
+        //     array[i + 1] = c;
+        //   }
+        // }
+        array.sort();
+        alert(array);
+      }
+      //   sort(array);
+      var $ = document.getElementById.bind(document);
+      $("print").onclick = function () {
+        print(array);
+      };
+      $("find").onclick = function () {
+        find(array);
+      };
+      $("max").onclick = function () {
+        max(array);
+      };
+      $("sum").onclick = function () {
+        sum(array);
+      };
+      $("sort").onclick = function () {
+        sort(array);
+      };
+    </script>
+  </body>
+</html>

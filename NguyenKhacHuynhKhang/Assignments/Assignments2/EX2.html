@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button id='declare'>Declare Array</button>
+    <button id="print">Print Array</button>
+    <button id="calculate">Calculate Array</button>
+    <button id="exist">Is number exist in Array?</button>
+    <button id="sort">Sort Array</button>
+    <script>
+        var array;
+      function declareArray() {
+        var n = parseInt(prompt("Please enter the number of row"));
+        var m = parseInt(prompt("Please enter the number of column"));
+        var arrayDeclare = [];
+        while (arrayDeclare.length < n) {
+          var arrayInArray = [];
+          for (var i = 0; i < m; i++) {
+            var element = parseInt(prompt("Enter a integer number"));
+            arrayInArray.push(element);
+          }
+          arrayDeclare.push(arrayInArray);
+        }
+        array = arrayDeclare
+      }
+    //   var array = declareArray();
+      function print(array) {
+        alert(array)
+      }
+      function calculateTotal(array) {
+        var total = 0;
+        for (var i = 0; i < array.length; i++) {
+          for (var j = 0; j < array[i].length; j++) {
+            total += array[i][j];
+          }
+        }
+        alert(total);
+      }
+      //   calculateTotal(array)
+      function isExist(array) {
+        var array2 = [];
+        for (var i = 0; i < array.length; i++) {
+          for (var j = 0; j < array[i].length; j++) {
+            array2.push(array[i][j]);
+          }
+        }
+        console.log(array2);
+        var number = parseInt(prompt("Please enter a integer number"));
+        if (array2.indexOf(number) !== -1) {
+          alert("This number is exist in this array");
+        } else {
+          alert("This number is not exist in this array");
+        }
+      }
+      //   isExist(array)
+      function sortArray(array) {
+        var array2 = [];
+        for (var i = 0; i < array.length; i++) {
+          for (var j = 0; j < array[i].length; j++) {
+            array2.push(array[i][j]);
+          }
+        }
+        array2.sort((a, b) => a - b);
+        alert(
+          "This is array after sorting the elements of this array by ascending: \n" +
+            array2
+        );
+      }
+      //   sortArray(array)
+      var $=document.getElementById.bind(document);
+      $('declare').onclick = function() {
+          declareArray()
+      }
+      $('calculate').onclick = function() {
+          calculateTotal(array)
+      }
+      $('print').onclick = function() {
+          print(array)
+      }
+      $('exist').onclick = function() {
+        isExist(array)
+      }
+      $('sort').onclick = function() {
+          sortArray(array)
+      }
+    </script>
+  </body>
+</html>

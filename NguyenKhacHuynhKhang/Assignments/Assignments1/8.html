@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      var months = parseInt(
+        prompt("Enter the month that you wanna know days of it in this years")
+      );
+      var year = parseInt(new Date().getFullYear());
+      switch (true) {
+        case months === 1 ||
+          months === 3 ||
+          months === 5 ||
+          months === 7 ||
+          months === 8 ||
+          months === 10 ||
+          months === 12:
+          alert("This month has 31 days");
+          break;
+        case months === 4 || months === 6 || months === 9 || months === 11:
+          alert("This month has 30 days");
+          break;
+        case months === 2 && year % 4 === 0:
+          alert("This month has 29 days");
+
+          break;
+        case months === 2 && year % 4 !== 0:
+          alert("This month has 28 days");
+
+          break;
+        default:
+          alert("Please enter a valid month");
+          break;
+      }
+    </script>
+  </body>
+</html>

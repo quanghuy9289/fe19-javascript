@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      var numbers = [0, 1];
+      while (numbers.length <= 20) {
+        numbers[numbers.length] =
+          numbers[numbers.length - 1] + numbers[numbers.length - 2];
+      }
+      alert(numbers)
+    </script>
+  </body>
+</html>

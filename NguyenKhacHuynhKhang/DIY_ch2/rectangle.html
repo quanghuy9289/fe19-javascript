@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rectangle</title>
+  </head>
+  <body>
+    <h1>The Area and Perimeter App</h1>
+    <script>
+      var length = prompt("Please enter the length");
+      length = parseFloat(length);
+      var width = prompt("Please enter the width");
+      width = parseFloat(width);
+      var area = parseInt(length * width);
+      var perimeter = parseInt(2 * (length + width));
+      document.write("Length: " + length + "<br />");
+      document.write("Width: " + width + "<br />");
+      document.write("Area: " + area + "<br />");
+      document.write("Perimeter: " + perimeter + "<br />");
+    </script>
+  </body>
+</html>

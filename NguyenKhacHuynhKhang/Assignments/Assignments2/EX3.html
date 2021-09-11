@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      var array = new Array();
+      do {
+        var student = prompt(
+          "Enter a student to add to list or enter STOP to end adding"
+        );
+        array.push(student);
+      } while (student !== "STOP");
+      array.sort();
+      var list = "";
+      for (var i = 0; i < array.length; i++) {
+        list = list + "Student " + i + 1 + ": " + array[i] + "\n";
+      }
+      alert(list);
+      // var name = prompt('Enter Name')
+      // console.log(name)
+    </script>
+  </body>
+</html>

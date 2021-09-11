@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Future Value</title>
+  </head>
+  <body>
+    <script>
+      var amount = prompt("Please enter the amount You want to invest");
+      amount = parseFloat(amount);
+      var futureValue = amount;
+      var rate = prompt("Please enter interest rate");
+      rate = parseFloat(rate);
+      var years = prompt("Please enter the number of years");
+      years = parseFloat(years);
+      for (var i = 0; i <= years; i++) {
+        futureValue = futureValue + futureValue * rate;
+      }
+      futureValue = parseFloat(futureValue)
+      futureValue = futureValue.toFixed(2)
+      document.write('Investment amount: ' + amount + '<br />')
+      document.write('Years: ' + years + '<br />')
+      document.write('Interest rate: ' + rate + '<br />')
+      document.write('Future Value: ' + futureValue + '<br />')
+    </script>
+    Thanks for using the Future Value application.
+  </body>
+</html>
