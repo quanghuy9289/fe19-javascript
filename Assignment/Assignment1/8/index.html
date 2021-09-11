@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+    
+    do {
+    var n = prompt('Tháng: ') 
+    n = parseInt(n)
+    if (n != 999) {
+        if (n < 13 && n > 0) {                   
+            alert("Tháng " + n + " có " + getDaysOfMonth(new Date().getFullYear(), n) + " ngày");             
+        } else {
+        alert('Vui lòng nhập đúng số tháng từ 1 đến 12!');
+    }
+    } else {
+        alert('Đã ngưng chương trình!')
+    }
+    } while (n != 999)
+
+    function getDaysOfMonth(year, month) {
+            return new Date(year, month, 0).getDate();
+            }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

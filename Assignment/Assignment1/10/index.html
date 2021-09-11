@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+    <script>
+        var $ = function(id) {
+            return document.getElementById(id);
+        };
+
+        var processEntries = function() {
+            var n = $('A').value;
+            n = parseInt(n);
+            
+            calculate(n);
+        };
+
+        var calculate = function(n) {
+            var i,j;
+    
+            for(i = 0; i < n; i++) {
+
+            for(j=0; j<=i; j++) {
+                document.write(" *");
+            }
+
+            document.write("<br>");
+
+        }
+            
+        };
+        
+        window.onload = function() {
+            $('calculate').onclick = processEntries;
+            $('A').focus();
+        };
+    </script>
+</head>
+<body>
+    <main>
+        <h1>Chương trình in ra màn hình hình tam giác</h1>
+        <p>Nhập vào 1 số nguyên bất kì</p>
+        <form action="">
+            <label for="A">A = </label>
+            <input type="text" id="A"> <br>
+
+            <input type="button" id="calculate" value="In hình tam giác"> <br>
+
+            <span id="span">&nbsp;</span>
+        </form>
+    </main>
+</body>
+</html>
