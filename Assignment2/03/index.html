@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exercise 03</title>
+</head>
+<body>
+  <script>
+    var listName = [];
+    var i = 0;
+    var moreEntries = true;
+    do {
+      var name = prompt("Enter name: ");
+      if(!isNaN(name)) {
+        alert("Please enter a valid name");
+      } else {
+        listName[i] = name; 
+        i++;
+      }
+      console.log(listName);
+      moreEntries = confirm("Continue?")
+    } while(moreEntries == true);
+    
+    if(moreEntries == false) {
+      listName.sort();
+      alert(listName.join("\n"));
+    }
+    
+  </script>
+</body>
+</html>
