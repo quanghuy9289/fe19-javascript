@@ -1,0 +1,39 @@
+* {
+	margin: 0;
+	padding: 0;
+  }
+body {
+    margin-left: 60px;
+}
+input {
+    margin-bottom: 1em;
+    padding: 0.5em;
+    border: 0.5px solid rgb(97, 193, 231);
+    border-radius: 4px;
+}
+input[type="button"] {
+    font-weight: bold;
+    border: none;
+    width: 6em;
+    background-color: green;
+    color: white;
+    margin-left: 0.25em;
+    margin-top: 0.5em;
+}
+input[type="text"] {
+    font-weight: bold;
+    width: 150px;
+    height: 20px;
+}
+.disabled {
+    border: 0.5px solid rgb(206, 197, 197);
+}
+h2 {
+    margin-top: 1em;
+    margin-bottom: 1em;
+    color: rgb(32, 169, 223)
+}
+span {
+    color: red;
+    margin-left: 0.5em;
+}

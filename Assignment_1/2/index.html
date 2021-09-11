@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exe 2</title>
+    <script>
+        var average;
+        var rank;
+        do {
+            var math = parseFloat(prompt("Enter score of math: ", 0));
+            if (isNaN(math) || math < 0 || math > 10) {
+                alert("Please enter 0 <= score <= 10");
+            } else {
+                do {
+                    var physics = parseFloat(prompt("Enter score of physics: ", 0));
+                    if (isNaN(physics) || physics < 0 || physics > 10) {
+                        alert("Please enter 0 <= score <= 10");
+                    } else {
+                        do {
+                            var chemistry = parseFloat(prompt("Enter score of chemistry: ", 0));
+                            if (isNaN(chemistry) || chemistry < 0 || chemistry > 10) {
+                                alert("Please enter 0 <= score <= 10");
+                            } else {
+                                average = (math + physics + chemistry) / 3;
+                                if (average >= 8) {
+                                    rank = "A";
+                                } else if (average >= 6.5) {
+                                    rank = "B";
+                                } else if (average >= 5) {
+                                    rank = "C";
+                                } else if (average < 5) {
+                                    rank = "D";
+                                }
+                                alert("Average score: " + average + "\nRank: " + rank);
+                            }
+                        } while (isNaN(chemistry) || chemistry < 0 || chemistry > 10);
+                    }
+                } while (isNaN(physics) || physics < 0 || physics > 10);
+            }
+        } while (isNaN(math) || math < 0 || math > 10);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

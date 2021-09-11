@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exe 1</title>
+    <script>
+        var a = parseInt(prompt("Enter number a: ", 0));
+        var b = parseInt(prompt("Enter number b: ", 0));
+        var c;
+        if (isNaN(a) || isNaN(b)){
+            alert("Please enter a number");
+        } else {
+            if (a != b) {
+                c = a; 
+                a = b;
+                b = c;
+                alert("After swap:\n" + 
+                    "a = " + a + "\nb = " + b);
+            } else {
+                alert("Enter different number");
+            }
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exe 07</title>
+    <script src="main.js"></script>
+    <link rel="stylesheet" href="main.css" />
+</head>
+<body>
+    <h1>Manage student's information</h1>
+    <br />
+    <main id = "infor">
+        <h4><a href="#">Enter student's information</a></h4>
+        <div id="form" >
+            <input type="text" id="code" name="code" placeholder="Enter student's code">
+            <span id="code_error">*</span>
+            <br />
+            <input type="text" id="name" name="name" placeholder="Enter student's name">
+            <span id="name_error">*</span>
+            <br />
+            <input type="text" id="age" name="age" placeholder="Enter student's age">
+            <span id="age_error">*</span>
+            <br />
+            <input type="radio" id="male" name="gender" checked />Male
+            <input type="radio" id="female" name="gender" />Female
+            <br />
+            <input type="button" id="submit" value="Submit" />
+            <br />
+        </div>
+        <h4><a href="#">View student information</a></h4>
+        <div id="list" ></div>
+    </main>
+</body>
+</html>
