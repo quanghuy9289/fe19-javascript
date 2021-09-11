@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex_1</title>
+    <script src="main.js"></script>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    
+    main {
+        display: flex;
+    }
+    
+    .menu {
+        width: 20%;
+    }
+    
+    .result {
+        background-color: wheat;
+        width: 80%;
+        padding: 20px;
+    }
+    
+    .result h2 {
+        color: #000;
+    }
+    
+    ul {
+        background-color: peru;
+        padding: 20px 0;
+    }
+    
+    h2 {
+        color: #fff;
+        padding: 0px 20px 20px 20px;
+    }
+    
+    li {
+        padding: 10px 20px;
+        list-style-type: none;
+        color: #fff;
+        font-weight: bold;
+        cursor: pointer;
+    }
+    
+    li:hover {
+        background-color: saddlebrown;
+        transition: 0.6s;
+    }
+    
+    p {
+        padding: 10px 0;
+    }
+</style>
+
+<body>
+    <main>
+        <section class="menu">
+            <ul>
+                <h2>Selection</h2>
+                <li id="print">Print Array</li>
+                <li id="search">Search A Member</li>
+                <li id="max">Max Min</li>
+                <li id="calculate">Calculate</li>
+                <li id="sort">Sort</li>
+            </ul>
+        </section>
+        <section class="result">
+            <h2>Result</h2>
+            <p id="screen"></p>
+            <p id="member"></p>
+            <p id="maximum"></p>
+            <!-- <p id="minimum"></p> -->
+            <p id="total"></p>
+            <p id="bubblesort"></p>
+        </section>
+    </main>
+</body>
+
+</html>
