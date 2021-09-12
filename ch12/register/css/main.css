@@ -1,0 +1,26 @@
+body {
+  font-size: 100%;
+  width: 800px;
+  margin: 0 auto;
+  border: 3px solid blue;
+  padding: 0 2em 1em;
+}
+h1 { 
+  font-size: 150%;
+  color: red; text-align:center;
+  margin-bottom: .5em;
+}
+label {
+  float: left;
+  width: 9em;
+}
+input, select {
+  width: 20em;
+  margin-left: 1em;
+  margin-bottom: 1em;
+}
+.error { color: red; }
+.success {color:green !important}
+.show { display: block; }
+.hide { display: none; }
+ 
