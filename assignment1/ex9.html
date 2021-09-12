@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bài 9</title>  
+  </head>
+  <body>
+    <main>
+      <body>
+        <script>
+             
+            var a = parseInt(prompt("Nhập a"));
+            var b = parseInt(prompt("Nhập b"));
+            function greatestCommonDivisor(a, b) {
+                if (a == 0 || b == 0) {
+                return a + b;
+                }
+                while (a != b) {
+                if (a > b) {
+                    a -= b;
+                } else {
+                    b -= a;
+                }
+                }
+                return a;
+            }
+            var result = greatestCommonDivisor(a,b);
+            alert('Ước chung của a và b là ' + result)
+          
+        </script>
+      </body>
+    </main>
+  </body>
+</html>

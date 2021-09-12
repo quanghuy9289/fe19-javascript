@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bài 8</title>  
+  </head>
+  <body>
+    <main>
+      <body>
+        <script>
+             
+            var n = parseFloat(prompt("Nhập số tháng n để biết tháng này có bao nhiêu ngày"));
+
+            var thisYear = new Date().getFullYear;
+
+            switch (true) {
+                case n === 1 ||
+                n === 3 ||
+                n === 5 ||
+                n === 7 ||
+                n === 8 ||
+                n === 10 ||
+                n === 12:
+                alert("Tháng này có 31 ngày");
+                break;
+                case n === 4 || n === 6 || n === 9 || n === 11:
+                alert("Tháng này có 30 ngày");
+                break;
+                case n === 2 && year % 4 === 0:
+                alert("Tháng này có 29 ngày");
+
+                break;
+                case n === 2 && year % 4 !== 0:
+                alert("Tháng này có 28 ngày");
+
+                break;
+                default:
+                alert("Vui lòng nhập trong khoảng 1 tới 12");
+                break;
+            }
+          
+        </script>
+      </body>
+    </main>
+  </body>
+</html>

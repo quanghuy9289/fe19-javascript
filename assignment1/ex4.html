@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bài 4</title>  
+  </head>
+  <body>
+    <main>
+      <body>
+        <script>
+            alert("Tìm x biết ax^2 + bx + c = 0");
+            var a = parseFloat(prompt("Nhập a"));
+            var b = parseFloat(prompt("Nhập b"));
+            var c = parseFloat(prompt("Nhập c"));
+            var delta = b * b - 4 * a * c;
+            if (delta < 0) {
+                alert("Phương trình vô nghiệm");
+            } else if (delta === 0) {
+                var x = (-b / 2) * a;
+                alert("Phương trình có nghiệm kép x = " + x);
+            } else {
+                var x1 = ((-b + Math.sqrt(delta)) / (2 * a)).toFixed(2);
+                var x2 = ((-b - Math.sqrt(delta)) / (2 * a)).toFixed(2);
+                alert("Phương trình có 2 nghiệm \n" + "x1 = " + x1 + "\n x2 = " + x2);
+            }
+          
+        </script>
+      </body>
+    </main>
+  </body>
+</html>
