@@ -1,0 +1,39 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+html {
+  font-size: 62.5%;
+  box-sizing: inherit;
+}
+body {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  box-sizing: border-box;
+  font-size: 1.6rem;
+  font-weight: 300;
+  line-height: 1.6;
+  position: relative;
+}
+
+.main {
+  transform: translateY(20rem);
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.group-btn {
+  display: flex;
+  flex-direction: column;
+}
+.group-btn > * {
+  margin-top: 2rem;
+  width: 20rem;
+}
+
+.text-area {
+  width: 50vw;
+  font-size: 3rem;
+  border: 2px solid brown;
+  border-radius: 3px;
+  background-color: rgb(194, 194, 194);
+}
