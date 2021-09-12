@@ -1,0 +1,4 @@
+div {display: none;}
+div.open {display: block;}
+
+.active a {color:red}
