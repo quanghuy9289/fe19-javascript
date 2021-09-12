@@ -1,0 +1,8 @@
+* {box-sizing: border-box;}
+main {float:left; width: 50%; margin: auto 25%; background: #eee;}
+h1 {padding-left: 20px;}
+#tasks, #form {width: 50%; float:left; padding: 20px;}
+
+label {width: 100%;}
+input[type="text"], textarea {width:100%; margin-bottom:10px}
+#add_task, #clear_tasks {width: 100px; height: 50px; padding:15px; text-align: center; float:left; margin-right: 10px;}
