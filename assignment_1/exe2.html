@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>average score</title>
+    <script>
+        var math;
+        var physics;
+        var chemistry;
+        var average;
+
+        math = prompt("enter math score: ");
+        math = parseFloat(math);
+        
+
+        physics = prompt("enter math score: ");
+        physics = parseFloat(physics);
+        
+        chemistry = prompt("enter math score: ");
+        chemistry =  parseFloat(chemistry);
+        
+
+        average = parseFloat( (math + physics + chemistry) /3 );
+
+        var averageScore = average;
+        
+
+
+        if (average >= 8.5) {
+            var average = "A";
+        }else if ((average >= 6.5) && (average < 8.5)) {
+            var average = "B";
+        }else if ((average > 5.0) && (average <6.5)) {
+            var average = "C";
+        }else {
+            var average = "D";
+        }
+    </script>
+    
+</head>
+
+<body>
+    <script>
+
+        document.write( "average score: " + averageScore + "<br>" 
+        + "RANK: " + average );
+
+    </script>
+
+</body>
+</html>

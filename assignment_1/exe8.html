@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=f, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function checkDay () {
+            with(frm){
+                var m = eval(month.value);
+                switch(m) {
+                    case 4:case 6: case 9: case 11:
+                        result.value = ("30 days in month " + m );
+                        break;
+                    default:
+                        result.value = ("31 days in month " + m );
+                }
+            }
+            return false;
+        };
+    </script>
+</head>
+<body>
+    <form name="frm" onsubmit="return checkDay();">
+        <label>enter month</label><input type="number" name= "month" min="1" max="12"><br>
+        <input type="submit" value="number of days in month">
+        <input type="text" name="result">
+    </form>
+    
+</body>
+</html>
