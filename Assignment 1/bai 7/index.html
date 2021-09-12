@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Manage student's information</title>
+    <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css" />    
+    <script src="student.js"></script>
+    <style>
+        .showHide {
+            display: none !important;
+        }
+    </style>
+  </head>
+  <body>
+    <div class="container text-center my-5 py-5 border shadow" style="width: 600px">
+      <h2>QUẢN LÝ THÔNG TIN SINH VIÊN</h2>
+      <br />
+
+      <a id="input" href="#" onclick="showHide('form')"><h4>1. Nhập thông tin sinh viên</h4></a>
+      <br />
+      <div id="form" class="showHide">
+        <div class="form-group w-50 mx-auto">
+          <input class="form-control" type="text" name="code" id="code" placeholder="Student Code" autofocus />
+          <div class="text-danger text-left" id="code_error"></div>
+        </div>
+        <div class="form-group w-50 mx-auto">
+          <input class="form-control" type="text" name="name" id="name" placeholder="Student Name" />
+          <div class="text-danger text-left" id="name_error"></div>
+        </div>
+        <div class="form-group w-50 mx-auto">
+          <input class="form-control" type="text" name="age" id="age" placeholder="Student Age" />
+          <div class="text-danger text-left" id="age_error"></div>
+        </div>
+        <div class="form-group w-50 mx-auto text-left">
+          <div class="form-check-inline font-weight-bold">
+            <label class="form-check-label">
+              <input class="form-check-input" type="radio" name="gender" id="male" />Male
+            </label>
+          </div>
+          <div class="form-check-inline font-weight-bold">
+            <label for="form-check-label">
+              <input class="form-check-input" type="radio" name="gender" id="female" />Female
+            </label>
+          </div>
+          <div class="text-danger" id="gender_error"></div>
+        </div>
+        <input class="btn-primary btn-lg" type="button" id="submit" value="Submit" />
+        <br /><br />
+      </div>
+      <a id="show" href="#" onclick="showHide('list')"><h4>2. Xem thông tin sinh viên</h4></a>
+      <div id="list" class="showHide">
+        <table class="table">
+          <thead>
+            <tr>
+              <th scope="col">Code</th>
+              <th scope="col">Name</th>
+              <th scope="col">Age</th>
+              <th scope="col">Gender</th>
+            </tr>
+          </thead>
+          <tbody id="studentList"></tbody>
+        </table>
+      </div>
+    </div>
+  </body>
+</html>
